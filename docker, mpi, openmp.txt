@@ -1,0 +1,28 @@
+MPI
+
+sudo apt update
+sudo apt upgrade
+sudo apt install -y openmpi-bin openmpi-common libopenmpi-dev
+mpirun --version
+sudo apt install -y python3 python3-pip
+pip3 install mpi4py
+python3 -m mpi4py --version
+
+OpenMP
+
+sudo apt-get install libomp-dev
+cd openmp
+
+Docker
+
+sudo apt update
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+mkdir fac
+cd fac
+nano factorial.py
+nano Dockerfile
+sudo docker build -t python_factorial .(dot compulsory)
+sudo docker run -d -p 5000:5000 python_factorial(python_factorial can be any name but should be same in two cmds)
+localhost:5000/factorial?num=9(input)
